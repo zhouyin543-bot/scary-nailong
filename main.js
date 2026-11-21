@@ -24,18 +24,18 @@ let userName = localStorage.getItem('nlName') || '';
    ========================================================= */
 const IMG = {
   nl: {
-    src: 'images/nailong.png', w: 488, h: 473, s: 1, rot: -12,
+    src: 'nailong.png', w: 488, h: 473, s: 1, rot: -12,
     eyes: [[245, 107, 12, 14], [322, 90, 10, 12]], mouth: [306, 153],
     head: '148 8 232 232', face: '168 26 210 210',
     extra: [[300, 300, 12], [262, 360, 8], [345, 372, 9], [150, 180, 7], [392, 140, 7], [222, 55, 7],
       [292, 38, 6], [200, 150, 6], [218, 405, 6], [335, 412, 6], [252, 250, 7], [352, 245, 8]],
   },
   feast: {
-    src: 'images/feast.jpg', w: 1280, h: 740, s: 1.35, rot: 7,
+    src: 'feast.jpg', w: 1280, h: 740, s: 1.35, rot: 7,
     eyes: [[617, 155, 16, 18], [720, 167, 15, 18]], mouth: [668, 224],
   },
   peek: {
-    src: 'images/peek.png', w: 300, h: 300, s: 1.9, rot: 0,
+    src: 'peek.png', w: 300, h: 300, s: 1.9, rot: 0,
     eyes: [[85, 160, 22, 24], [208, 158, 22, 24]], mouth: [143, 215],
   },
 };
@@ -110,9 +110,9 @@ function onl(v = 'happy', key = 'nl', vb = null, par = 'xMidYMid meet') {
 }
 
 /* 商品图（全部使用官方形象） */
-const RND = 'images/nailong-round.png';
+const RND = 'nailong-round.png';
 const PROD = {
-  plush: () => `<img src="images/nailong.png" alt="奶龙毛绒公仔" />`,
+  plush: () => `<img src="nailong.png" alt="奶龙毛绒公仔" />`,
   box: () => `<svg viewBox="0 0 200 200">
       <rect x="42" y="80" width="116" height="94" rx="10" fill="#FF8FAB"/>
       <rect x="34" y="62" width="132" height="30" rx="8" fill="#FF6F98"/>
@@ -140,7 +140,7 @@ const PROD = {
       </defs>
       <circle cx="100" cy="105" r="98" fill="url(#nlGlow)"/>
       <rect x="40" y="50" width="120" height="112" fill="#FFF3C4" clip-path="url(#domeClip)"/>
-      <image href="images/peek.png" x="30" y="58" width="140" height="140" clip-path="url(#domeClip)"/>
+      <image href="peek.png" x="30" y="58" width="140" height="140" clip-path="url(#domeClip)"/>
       <path d="M50 160 Q50 50 100 50 Q150 50 150 160 Z" fill="rgba(255,250,220,.18)" stroke="#D99A00" stroke-width="4"/>
       <rect x="40" y="158" width="120" height="22" rx="8" fill="#FFB300"/></svg>`,
 };
@@ -558,7 +558,7 @@ const nav = $('#nav'), navLinks = $$('#navLinks a'), secs = $$('main > section')
 let curStage = -1, H = 0, jumped = false;
 
 function setFavicon(dark) {
-  if (!dark) { $('#favicon').href = 'images/nailong-round.png'; return; }
+  if (!dark) { $('#favicon').href = 'nailong-round.png'; return; }
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#000"/><circle cx="22" cy="28" r="5" fill="#f00"/><circle cx="42" cy="28" r="5" fill="#f00"/></svg>`;
   $('#favicon').href = 'data:image/svg+xml,' + encodeURIComponent(svg);
 }
